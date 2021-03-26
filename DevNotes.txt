@@ -1,0 +1,13 @@
+images for pizzas
+https://www.seriouseats.com/2017/02/20170216-detroit-style-pizza-47-1500x1125-1.jpg
+https://di-cdn.sfo2.digitaloceanspaces.com/cdn/533_5ddb4ba143a637afbd3fc1b4555095c4.jpg
+https://www.rachaelraymag.com/.image/t_share/MTQ5MDA3NzI1OTgyOTE4MzIz/capricciosa-pizza-102694414.jpg
+
+images for Sandwitches
+https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/4/23/0/WU2205_Pork-Schnitzel-Sandwich_s4x3.jpg.rend.hgtvcom.826.620.suffix/1556054964601.jpeg
+https://assets.epicurious.com/photos/5620ffcf219057901cc67b64/master/pass/364812_grilled-cuban-sandwich_1x1.jpg
+https://www.safeway.ca/wp-content/uploads/2020/11/BBQ-Beef-On-A-Bun_B-cropped.jpg
+
+
+Information from:
+w3schools.com

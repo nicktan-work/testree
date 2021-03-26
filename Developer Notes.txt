@@ -1,0 +1,96 @@
+Citations
+---------
+I searched for some images of Pizzas and Sandwitches, etc. from these URLS
+https://unsplash.com/s/photos/pizza
+https://unsplash.com/s/photos/lunch
+https://unsplash.com/s/photos/european-food
+https://unsplash.com/s/photos/italian-food
+https://unsplash.com/s/photos/mixed-grill
+
+https://www.pexels.com/search/pizza/
+https://www.pexels.com/search/italian%20food/
+https://www.pexels.com/search/european%20food/
+
+I searched for background images from 
+https://www.pexels.com/search/european%20cafe/
+https://unsplash.com/s/photos/european-cafe
+https://www.pexels.com/search/background%20pattern/
+
+I searched for repeatable background pattern generators from 
+https://www.whoishostingthis.com/resources/pattern-generators/
+http://www.patternify.com/
+https://patternico.com/
+https://patternico.com/emoji/
+
+I used 
+https://patternico.com/emoji/
+
+
+
+
+
+Image Resizing programs if your images are too big
+https://www.getpaint.net/   Windows Only
+https://www.gimp.org/       Window, Mac OS, Linux
+
+
+
+Approach
+--------
+1) Make some Markup for the HTML form
+  - Case a based HTML page
+  - Created a form
+  - Added the form buttons
+  - Added the form inputs for name, phone
+  - Added the content for the menu items
+  - Wrapped very thing in a <div> to make it vertical
+  - added the quy input fields for each item that had a price
+  - Added the pickup from the from example javascript_events/LotteryTickets/index.html
+
+2) Add some simply CSS to style the form
+  - Wrap the form in a border
+  - Apply some basic formatting to have a vertical form
+
+3) Look for some JavaScript that gets information from the form
+
+
+4) Calculates a math equation (qty * price = ItemCost)
+  - Get the Qty from a input on the screen
+  - Convert the string value from the input field to a number
+  - multiple the numeric qty * the price 
+  - 
+
+
+5) Calculate the total of all items purchase (SUM)
+
+6) How do I debug the JavaScript?
+
+7) How can I show the values of variables without knowing how to ouput the
+   variables into the web page yet?
+
+8) How do I update the screen with my calculation answer
+
+
+Personal Notes
+--------------
+I determined that it was better to write a generic function that I could call 
+to pass in an ID, and have it retrive the quantity from the input field with
+that ID.  I had written a function for each ID, I would have so many functions
+that were the exact same code, with only the id being different.  Something like 
+GetQtyOfItem("qty-Pizza1"), and that function would find the qty, convert it to a
+numeric value, and return me the number so I could assign it to a variable.
+
+I also determined that rather than call a specific function for each <input type='num'>
+that had the quantity of the item the consumer wanted to order, that it would be better
+to call a generic "UpdateTheOrder()" type function, and allow that function to call
+the the GetQtyOfItem(id) method for each qty, and then do the math to figure out the
+prices, etc.
+
+I then added the onchange="UpdateTheOrder();" on each of the <input type="number">
+elements in the HTML markup field
+e.g.
+   <input type="number" id="qty-Pizza1" name="QtyPizza1" min=0 max=25 onchange="UpdateTheOrder();">
+   <input type="number" id="qty-Pizza2" name="QtyPizza2" min=0 max=25 onchange="UpdateTheOrder();">
+    etc.
+
+

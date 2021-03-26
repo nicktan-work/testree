@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Online</title>
+    <link rel="stylesheet" href="menu.css">
+    <script type="text/javascript" src="menu.js"></script>
+</head>
+
+<body onload="IntializePage();">
+    <div id="todayDate"></div>
+
+    <form id="orderForm" action="https://localhost/PlaceOnlineOrder.htm" method="GET">
+        <div>
+            Contact Info
+            <div>
+                <label for="firstName">First name and Last name: </label>
+                <input type="text" id="firstName" name="FirstName" placeholder="FirstName LastName"  onchange="CalculateOrderDetails();">
+            </div>
+
+            <div>
+                <label for="phoneNum">Contact Phone: </label>
+                <input type="tel" id="phoneNum" name="PhoneNum" placeholder="403-555-5555" pattern="[0-9]{3}[-]{0,1}[0-9]{3}[-]{0,1}[0-9]{4}"  onchange="CalculateOrderDetails();">
+            </div>
+        </div>
+
+        <div>
+            Neapolitan Style Pizza:
+            <div>
+                <img src="https://cdn.loveandlemons.com/wp-content/uploads/2019/09/margherita-pizza-500x500.jpg"
+                    id="menuimg" alt="margherita pizza">
+                <label for="pizza1">Margherita $12.00</label>
+                <input type="number" id="pizza1" name="MargheritaZa" value="0" min="0" max="25"
+                    onchange="CalculateOrderDetails();">
+            </div>
+
+            <div>
+                <img src="https://di-cdn.sfo2.digitaloceanspaces.com/cdn/533_5ddb4ba143a637afbd3fc1b4555095c4.jpg"
+                    id="menuimg" alt="4 cheese">
+                <label for="pizza2">Quattro Formaggi $12.50</label>
+                <input type="number" id="pizza2" name="QuattroFormaggi" value="0" min="0" max="25"
+                    onchange="CalculateOrderDetails();">
+            </div>
+
+            <div>
+                <img src="https://www.rachaelraymag.com/.image/t_share/MTQ5MDA3NzI1OTgyOTE4MzIz/capricciosa-pizza-102694414.jpg"
+                    id="menuimg" alt="capricciosa">
+                <label for="pizza3">Capricciosa: $13.00</label>
+                <input type="number" id="pizza3" name="Capricciosa" value="0" min="0" max="25"
+                    onchange="CalculateOrderDetails();">
+            </div>
+        </div>
+
+        <div>
+            Sandwich Choices
+            <div>
+                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/4/23/0/WU2205_Pork-Schnitzel-Sandwich_s4x3.jpg.rend.hgtvcom.826.620.suffix/1556054964601.jpeg"
+                    id="menuimg" alt="Schnitzel">
+                <label for="sandwich1">Schnitzel $8.50</label>
+                <input type="number" id="sandwich1" name="Schnitzel" value="0" min="0" max="25"
+                    onchange="CalculateOrderDetails();">
+            </div>
+
+            <div>
+                <img src="https://assets.epicurious.com/photos/5620ffcf219057901cc67b64/master/pass/364812_grilled-cuban-sandwich_1x1.jpg"
+                    id="menuimg" alt="MixedGrill">
+                <label for="sandwich2">Mixed Grill $9.50</label>
+                <input type="number" id="sandwich2" name="MixedGrill" value="0" min="0" max="25"
+                    onchange="CalculateOrderDetails();">
+            </div>
+
+            <div>
+                <img src="https://www.safeway.ca/wp-content/uploads/2020/11/BBQ-Beef-On-A-Bun_B-cropped.jpg"
+                    id="menuimg" alt="BeefBun">
+                <label for="sandwich3">Beef on a bun $10.00</label>
+                <input type="number" id="sandwich3" name="BeefBun" value="0" min="0" max="25"
+                    onchange="CalculateOrderDetails();">
+            </div>
+        </div>
+
+        <div>
+            Beverages
+            <div>
+                <label for="drink1">Coffee $2.00</label>
+                <input type="number" id="drink1" name="Coffee" value="0" min="0" max="25" onchange="CalculateOrderDetails();">
+            </div>
+
+            <div>
+                <label for="drink2">Latte $2.50</label>
+                <input type="number" id="drink2" name="Latte" value="0" min="0" max="25" onchange="CalculateOrderDetails();">
+            </div>
+
+            <div>
+                <label for="drink3">Soft Drink $1.75</label>
+                <input type="number" id="drink3" name="SoftDrink" value="Soft Drink"
+                    onchange="CalculateOrderDetails();">
+            </div>
+
+            <div>
+                <label for="pickup"> Pickup Time</label>
+                <input type="datetime-local" id="pickup" name="PickupTime" value="Pick Up Time"
+                    onchange="CalculateOrderDetails();">
+            </div>
+
+        </div>
+
+        <input type="submit">
+    </form>
+
+    <div id="Your-Total">
+        <!-- this will replaced -->
+        <h1>This is your bill</h1>
+        <p>Your Name</p>
+        <p>Telephone Number</p>
+        <p>Pickup time</p>
+        <br>
+        <ol>
+            <li>
+                <div class="line-item">
+                    <label class="product">Pizza1</label><label class="qtyprice">2 qty @ 12.00</label><label
+                        class="itemtotal">$24.00</label>
+                </div>
+            </li>
+            <li>
+                <div class="line-item">
+                    <label class="product">Sandwich3</label><label class="qtyprice">4 qty @ 900</label><label
+                        class="itemtotal">$36.00</label>
+                </div>
+            </li>
+            <li>
+                <div class="line-item">
+
+                    <label class="product">SoftDrink</label><label class="qtyprice">6 qty @ 2.00</label><label
+                        class="itemtotal">$12.00</label>
+                </div>
+            </li>
+        </ol>
+        <br>
+        <p>You total is <span class="totalprice">$129.00</span></p>
+    </div>
+</body>
+
+</html>
